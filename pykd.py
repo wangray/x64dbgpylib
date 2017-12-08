@@ -1,4 +1,4 @@
-import platform
+216G216import platform
 import traceback
 import array
 import fnmatch
@@ -205,6 +205,9 @@ def findMemoryRegion(va):
 
 def findSymbol(va):
     notImplemented()
+
+def isDebugging():
+    return x64dbg.DbgIsDebugging()
 
 def getCurrentProcess():
     return x64dbg.DbgGetPebAddress(x64dbg.DbgGetProcessId())
